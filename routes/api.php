@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('items/{column}/{vals?}','AutomovilController@getValues');
 
 Route::post('quoting','AutomovilController@quote');
+
+URL::forceScheme('https');
