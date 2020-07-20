@@ -17,4 +17,4 @@ Route::get('items/{column}/{vals?}','AutomovilController@getValues');
 
 Route::post('quoting','AutomovilController@quote');
 
-//URL::forceScheme('https');
+URL::forceScheme('https');
