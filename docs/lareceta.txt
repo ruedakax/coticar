@@ -1,0 +1,28 @@
+1) Crear el proyecto en laravel 
+
+composer create-project --prefer-dist laravel/laravel quuoting
+
+2) incluir las opciones de ui
+composer require laravel/ui
+
+3) instalar react
+php artisan ui react
+
+
+3.5) instalar babel para que entienda la nueva sintaxis
+ 
+npm install @babel/plugin-proposal-class-properties
+
+4)ejecutar el server de laravel 
+
+php artisan server
+
+5)modificar los llamados en el router-controller-vista, es decir en la vista generar el llamado app.js
+  y a su vez este buscara el objeto que será el conteiner del componente. 
+
+6)Correr el server que unifica laravel y react.
+
+npm run watch
+
+
+
