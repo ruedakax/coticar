@@ -6,7 +6,7 @@
 		<meta name="csrf-token" href="{{csrf_token()}}">
         <title>Laravel</title>
         <!-- Styles -->
-		<link rel="stylesheet" href="{{asset('css/app.css')}}">
+		<link rel="stylesheet" href="{{secure_asset('css/app.css')}}">
         <style>
             html, body {
                 background-color: #fff;
@@ -67,5 +67,5 @@
             </div>
         </div>
     </body>
-	<script type="text/javascript" src="{{asset('js/app.js')}}"></script>
+	<script type="text/javascript" src="{{secure_asset('js/app.js')}}"></script>
 </html>
