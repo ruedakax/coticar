@@ -72947,7 +72947,7 @@ var Response = /*#__PURE__*/function (_React$Component) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "url", function() { return url; });
-var url = 'http://coticar.herokuapp.com/api/';
+var url = 'https://coticar.herokuapp.com/api/';
 
 /***/ }),
 
