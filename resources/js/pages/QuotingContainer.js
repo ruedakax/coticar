@@ -65,7 +65,7 @@ class QuotingContainer extends React.Component{
 				},
 				body:JSON.stringify(query)				
 			}
-			let res = await fetch(`${url}quoting`,config);
+			let res = await fetch(`http://coticar.herokuapp.com/api/quoting`,config);
 			let data = await res.json();			
 			if(!data.exception && !data.errors){
 				this.setState({
