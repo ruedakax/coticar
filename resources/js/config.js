@@ -1,2 +1,2 @@
-export const url = 'http://coticar.herokuapp.com/api/'
+export const url = 'https://coticar.herokuapp.com/api/'
       
