@@ -13,8 +13,9 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+//URL::forceScheme('https');
+
 Route::get('items/{column}/{vals?}','AutomovilController@getValues');
 
 Route::post('quoting','AutomovilController@quote');
 
-URL::forceScheme('https');

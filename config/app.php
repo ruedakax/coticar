@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://coticar.herokuapp.com/'),
+    'url' => env('APP_URL', 'http://coticar.herokuapp.com/'),
 
     'asset_url' => env('ASSET_URL', null),
 
