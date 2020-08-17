@@ -72514,10 +72514,11 @@ var Arrow = function Arrow(_ref) {
     id: "registerTip",
     place: "top",
     effect: "float",
-    type: "info"
+    type: "info",
+    backgroundColor: "#f88102"
   }, "Volver"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "button",
-    className: "btn btn-light",
+    className: "btn bg-dark",
     onClick: onClick,
     "data-for": "registerTip",
     "data-tip": true
@@ -72526,7 +72527,7 @@ var Arrow = function Arrow(_ref) {
     width: "1.7em",
     height: "1.7em",
     viewBox: "0 0 16 16",
-    fill: "#3490DC",
+    fill: "#f88102",
     xmlns: "http://www.w3.org/2000/svg"
   }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
     fillRule: "evenodd",
@@ -72560,7 +72561,8 @@ __webpack_require__.r(__webpack_exports__);
 var BreadCrumb = function BreadCrumb(_ref) {
   var items = _ref.items;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    "aria-label": "breadcrumb"
+    "aria-label": "breadcrumb",
+    className: "bg-secondary"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
     className: "breadcrumb"
   }, items.map(function (item, index) {
@@ -72729,7 +72731,7 @@ var Items = function Items(_ref) {
       campos = _ref.campos,
       index = _ref.index;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-    className: "custom-select my-1 mr-sm-2",
+    className: "custom-select my-1 mr-sm-2 bg-secondary",
     id: campos[index],
     name: campos[index],
     defaultValue: vdefault,
@@ -72808,14 +72810,14 @@ var QuotingForm = function QuotingForm(_ref) {
   var migapan = index ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_BreadCrum__WEBPACK_IMPORTED_MODULE_3__["default"], {
     items: valores
   }) : '';
-  var boton = index === campos.valores.length - 1 && !errorSubmit ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  var boton = index + 1 === campos.valores.length && !errorSubmit ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     type: "submit",
-    className: "btn btn-primary"
+    className: "btn btn-secondary"
   }, "Consultar") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card"
+    className: "card bg-dark"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card-header"
+    className: "card-header titulo-cabeza"
   }, flecha, "Seleccione ", campos.labels[index]), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card-body"
   }, migapan, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
@@ -72903,10 +72905,10 @@ var Response = /*#__PURE__*/function (_React$Component) {
             key: index
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
             className: "card-header"
-          }, "Cotizaci\xF3n"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-            className: "card-body"
+          }, "RESULTADO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            className: "card-body card-result"
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-            className: "card-title"
+            className: "card-title titulo-cabeza"
           }, card[0].title), card[0].body.map(function (item, ind) {
             return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
               className: "card-text",
@@ -72947,7 +72949,7 @@ var Response = /*#__PURE__*/function (_React$Component) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "url", function() { return url; });
-var url = 'https://coticar.herokuapp.com/api/';
+var url = 'https://carcot.herokuapp.com/api/';
 
 /***/ }),
 

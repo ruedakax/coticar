@@ -7,10 +7,10 @@ const QuotingForm = ({ valores,index,onGoBack,onAddItem,campos,handleSubmit,erro
   // De acuerdo al index se muestra la flecha de volver, la miga de pan y el boton de enviar
   let flecha = index?<Arrow onClick={onGoBack}/>:<span></span>; 
   let migapan = index?<BreadCrum items = {valores} />:''; 
-  let boton = index  === campos.valores.length - 1 && !errorSubmit ?<button type="submit" className="btn btn-primary">Consultar</button>:<span></span>;  
+  let boton = index + 1  === campos.valores.length && !errorSubmit ?<button type="submit" className="btn btn-secondary">Consultar</button>:<span></span>;  
   
-  return 	<div className="card">
-        <div className="card-header">
+  return 	<div className="card bg-dark">
+        <div className="card-header titulo-cabeza">
           {flecha}    
           Seleccione {campos.labels[index]}
         </div>

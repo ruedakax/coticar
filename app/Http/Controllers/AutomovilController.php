@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -97,6 +96,8 @@ class AutomovilController extends Controller{
 	}
 
 	private function buildCards($cards){	
+		setlocale(LC_MONETARY, 'es_CO'); 
+
 		$res = array();
 
 		foreach($cards as $key => $card){
@@ -105,30 +106,32 @@ class AutomovilController extends Controller{
 				switch ($key) {
 					case 'principal':																
 							$a_card[] = [
-								"title" => "Resultado",
-								"body" => array("kilometraje promedio : $card->kilometros",
-										   "precio promedio : $card->precio",
-										   "kilometraje mínimo : $card->min_kilometros",
-										   "precio mínimo : $card->min_precio",
-										   "kilometraje máximo : $card->max_kilometros",
-										   "precio máximo : $card->max_precio")
+								"title" => "Cotización",
+								"body" => array("Kms promedio : ".number_format($card->kilometros),
+										   "Precio promedio : $ ".number_format($card->precio),
+										   "Kms mínimo : ".number_format($card->min_kilometros),
+										   "Precio mínimo : $ ".number_format($card->min_precio),
+										   "Kms máximo : ".number_format($card->max_kilometros),
+										   "Precio máximo : $ ".number_format($card->max_precio)
+										  )
 							];											
 						break;
 					case 'color':						
 							$a_card[] = [
 								"title" => "Color",
-								"body" => array("El color más usado: $card->color")
+								"body" => array("El más usado: ".strtoupper($card->color))
 							];											
 					break;
 					case 'otro_dep':							
 							$a_card[] = [
-								"title" => "Mismo vehiculo otra zona (".$card[0]->depto.")",
-								"body" => array("kilometraje promedio : ".$card[1]->kilometros,
-										"precio promedio : ".$card[1]->precio,
-										"kilometraje mínimo :". $card[1]->min_kilometros,
-										"precio mínimo : ".$card[1]->min_precio,
-										"kilometraje máximo :". $card[1]->max_kilometros,
-										"precio máximo : ".$card[1]->max_precio)
+								"title" => "Mismo vehículo otra zona (".ucwords($card[0]->depto).")",
+								"body" => array("Kms promedio : ".number_format($card[1]->kilometros),
+											"Precio promedio : $ ".number_format($card[1]->precio),
+											"Kms mínimo : ".number_format($card[1]->min_kilometros),
+											"Precio mínimo : $ ".number_format($card[1]->min_precio),
+											"Kms máximo :  ".number_format($card[1]->max_kilometros),
+											"Precio máximo : $ ".number_format($card[1]->max_precio)
+										 )
 							];						
 					break;
 				}

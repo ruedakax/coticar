@@ -12,9 +12,9 @@ class Response extends React.Component{
          return <Carousel showArrows={true} showThumbs={false}>
                   {this.props.respuesta.map((card,index) => (                  
                   <div className="card text-white bg-dark mb-3" key={index}>
-                  <div className="card-header">Cotización</div>
-                  <div className="card-body">
-                     <h5 className="card-title">{card[0].title}</h5>                       
+                  <div className="card-header">RESULTADO</div>
+                  <div className="card-body card-result">
+                     <h5 className="card-title titulo-cabeza">{card[0].title}</h5>                       
                         {card[0].body.map((item,ind) => (                           
                            <p className="card-text" key={ind}>{item}</p>
                         ))}                                                

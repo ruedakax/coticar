@@ -15,8 +15,9 @@ const ItemSearch = ({onAddItem,valores,index,campos,errorSubmit}) => {
                 console.log(errorSubmit);
                 return <FatalError error={errorSubmit}/>
         }
+	
         
-        const {data, loading, error} = useFetch(`http://coticar.herokuapp.com/api/items/${args()}/${vals()}`);
+        const {data, loading, error} = useFetch(`${url}items/${args()}/${vals()}`);
         
         if(loading)
 	        return <Loading />		
