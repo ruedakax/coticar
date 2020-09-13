@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 //URL::forceScheme('https');
 
-Route::get('items/{column}/{vals?}','AutomovilController@getValues');
+Route::get('items/{column}/{vals?}','AutomovilController@getValues')->middleware('httpsecure');;
 
-Route::post('quoting','AutomovilController@quote');
+Route::post('quoting','AutomovilController@quote')->middleware('httpsecure');;
 
